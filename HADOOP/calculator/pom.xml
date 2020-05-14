@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.musicnova.obfuscator</groupId>
-    <artifactId>musicnova-obfuscator-parent</artifactId>
+    <groupId>io.github.musicnova.ivanov</groupId>
+    <artifactId>ivanov-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -21,8 +21,7 @@
         <griffon.version>1.6.3</griffon.version>
         <apache.poi.version>4.1.0</apache.poi.version>
         <CodeCacheSize>1024m</CodeCacheSize>
-        <main_dir>${session.executionRootDirectory}</main_dir>
-    <properties>
+    </properties>
 
     <repositories>
         <repository>
@@ -70,7 +69,7 @@
            <plugins>
                <plugin>
                     <groupId>org.scalastyle</groupId>
-                    <artefactId>scalastyle-maven-plugin</artifactId>
+                    <artifactId>scalastyle-maven-plugin</artifactId>
                     <version>1.0.0</version>
                     <configuration>
                         <verbose>true</verbose>
@@ -79,7 +78,7 @@
                         <failOnWarning>false</failOnWarning>
                         <sourceDirectory>${project.basedir}/src/main/scala</sourceDirectory>
                         <testSourceDirectory>${project.basedir}/src/test/scala</testSourceDirectory>
-                        <configLocation>${main_dir}/scalastyle_config.xml</configLocation>
+                        <configLocation>main_dir/scalastyle_config.xml</configLocation>
                         <outputFile>${project.basedir}/target/scalastyle-output.xml</outputFile>
                         <outputEncoding>UTF-8</outputEncoding>
                     </configuration>
@@ -93,7 +92,7 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin<artifactId>
+                    <artifactId>maven-assembly-plugin</artifactId>
                     <version>3.1.0</version>
                     <configuration>
                         <descriptorRefs>
@@ -150,7 +149,7 @@
                         <jvmArgs>
                             <jvmArg>-Xms3072m</jvmArg>
                             <jvmArg>-Xmx3072m</jvmArg>
-                            <jvmArg>-XX:ReservedCodeCacheSize=${CpdeCacheSize}</jvmArg>
+                            <jvmArg>-XX:ReservedCodeCacheSize=${CodeCacheSize}</jvmArg>
                         </jvmArgs>
                         <javacArgs>
                             <javacArg>-source</javacArg>
@@ -194,8 +193,7 @@
     </build>
 
     <modules>
-        <module>test_kit</module>
-        <module>calculator</module>
+        <module>draft</module>
     </modules>
 
     <dependencyManagement>
