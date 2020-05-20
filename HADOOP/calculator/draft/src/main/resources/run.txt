@@ -9,6 +9,6 @@ export SPARK_HOME=/c/Users/1/SPARK/spark-2.4.5-bin-hadoop2.7
 export JAVA_HOME=/c/Program\ Files/Java/jdk1.8.0_201/jre
 export HADOOP_HOME=/c/Users/1/IdeaProjects/draft/hadoop
 
-PATH=$PATH:/c/Users/18450590/SPARK/spark-2.4.5-bin-hadoop2.7/bin bash -x  spark-shell
+PATH=$PATH:/c/Users/1/SPARK/spark-2.4.5-bin-hadoop2.7/bin bash -x  spark-shell
 
 # PATH=$PATH:/c/Users/1/SPARK/spark-2.4.5-bin-hadoop2.7/bin spark-submit  --deploy-mode local  draft.jar
